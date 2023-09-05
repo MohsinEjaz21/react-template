@@ -2,7 +2,7 @@ import React, { createContext, useContext, useMemo } from 'react';
 import { SettersFor, useNestedState } from './useNestedState';
 
 const initialState = {
-  test: ''
+  test: 'TEST STATE'
 };
 
 // types for state and context
@@ -21,7 +21,7 @@ const GlobalContext = createContext<GlobalContextType>([
 ]);
 
 // create provider
-const GlobalProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const GlobalProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [state, setters, reset] = useNestedState(initialState);
   const memoizedSetters = useMemo(() => setters, [state]);
   return (
@@ -32,9 +32,4 @@ const GlobalProvider: React.FC<{ children: React.ReactNode }> = ({ children }) =
 };
 
 // create hook for using context
-const useGlobalContext = () => useContext(GlobalContext);
-
-export const globalContext = {
-  GlobalProvider,
-  useGlobalContext
-}
+export const useGlobalContext = () => useContext(GlobalContext);
