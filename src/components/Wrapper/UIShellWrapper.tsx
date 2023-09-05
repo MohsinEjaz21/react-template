@@ -4,7 +4,7 @@ export const UIShellWrapper = (props) => {
     <div className="app">
       <div className="app__header">
         <img src="/assets/img/logo.svg" alt="logo" className="app__logo" />
-        <h1>REACT TEMPLATE</h1>
+        <h1 className="heading">REACT TEMPLATE</h1>
       </div>
 
       <div className="app__content">
