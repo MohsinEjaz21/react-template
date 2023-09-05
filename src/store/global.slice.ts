@@ -1,4 +1,4 @@
 
 export const GlobalSlice = {
-  test: 'test',
+  className: 'gray',
 }
