@@ -1,4 +1,4 @@
-import classnames from 'classnames'
+import clsx from 'classnames'
 import style from './index.module.scss'
 
 function ButtonWidget({
@@ -9,7 +9,7 @@ function ButtonWidget({
   return (
     <button
       type="button"
-      className={classnames(style.btn, style[`btn__${kind}`],)}
+      className={clsx(style.btn, style[`btn__${kind}`],)}
       onClick={onClick}>
       {children}
     </button>
