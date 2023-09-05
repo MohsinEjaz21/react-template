@@ -2,7 +2,7 @@ import React, { createContext, useContext, useMemo } from 'react';
 import { SettersFor, useNestedState } from './useNestedState';
 
 const initialState = {
-  test: 'TEST STATE'
+  className: 'red'
 };
 
 // types for state and context
