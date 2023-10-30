@@ -3,11 +3,19 @@
   --color__black: #000000;
 }
 
-// font-family: "JetBrains Mono", monospace;
-.gray {
-  background: lightgray;
+.textarea {
+  width: 500px;
+  height: 200px;
 }
 
-.green {
-  background-color: lightgreen;
+.container {
+  margin: 0 auto;
+  align-items: center;
+  display: grid;
+  gap: 20px;
+  max-width: 1000px;
+}
+
+.item__highlight {
+  background-color: yellow;
 }

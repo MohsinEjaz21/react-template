@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Circles Demo</title>
+    </head>
+
+    <body>
+
+        <canvas id="mainCanvas" width="400" height="400"></canvas>
+
+        <script>
+            var canvas = document.getElementById("mainCanvas");
+            var context = canvas.getContext("2d");
+
+            var data = [
+                {
+                    name: "2",
+                    radius: 30,
+                    color: "red",
+                    coordinates: [130, 100],
+                },
+                {
+                    name: "6",
+                    radius: 70,
+                    color: "green",
+                    coordinates: [200, 50],
+                },
+                {
+                    name: "9",
+                    radius: 70,
+                    color: "blue",
+                    coordinates: [300, 200],
+                },
+                {
+                    name: "3",
+                    radius: 45,
+                    color: "gray",
+                    coordinates: [75, 110],
+                },
+                {
+                    name: "5",
+                    radius: 60,
+                    color: "orange",
+                    coordinates: [175, 300],
+                },
+                {
+                    name: "1",
+                    radius: 52,
+                    color: "purple",
+                    coordinates: [225, 320],
+                },
+            ];
+
+            function drawCircle(ctx, obj) {
+                ctx.beginPath();
+                ctx.fillText(obj.name, obj.coordinates[0], obj.coordinates[1]);
+                ctx.arc(obj.coordinates[0], obj.coordinates[1], obj.radius, 0, 2 * Math.PI, false);
+                ctx.fillStyle = obj.color;
+                ctx.fill();
+            }
+
+            function drawCircles() {
+                data.forEach((item) => {
+                    drawCircle(context, item);
+                    //  circle.addEventListener("click", () => {
+                    //     console.log(`Clicked on ${item.name}`);
+                    // });
+                });
+            }
+            drawCircles();
+
+        </script>
+
+    </body>
+
+</html>
